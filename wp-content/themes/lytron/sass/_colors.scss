@@ -1,0 +1,108 @@
+$DARK_COLORS: false;
+
+//--------------------------------
+//- Site specific colors
+//--------------------------------
+
+
+//--------------------------------
+//- Light colors
+//--------------------------------
+$body_color: #444;
+$link_color: #0066FF;
+
+$normal_color: #ccc;
+$light_color: #ededed;
+$dark_color: #666;
+$middle_color: #A6A6A6;	
+
+$reply_bg: #fff;
+
+//--------------------------------
+//- Dark Colors
+//--------------------------------
+@if $DARK_COLORS {
+	$body_color: #fff;
+	$link_color: #0066FF;
+
+	$normal_color: #333;
+	$light_color: #222;
+	$dark_color: #222;
+	$middle_color: #ccc;
+
+	$reply_bg: #1a1a1a;	
+}
+
+//==================================================================================
+//= 								Implementation
+//==================================================================================
+
+//--------------------------------
+//- html elements
+//--------------------------------
+$abbr_border: $dark_color;
+$pre_border: $light_color;
+// $pre_color: $dark_color;
+
+//--------------------------------
+//- inputs
+//--------------------------------
+$input_border: $normal_color;
+
+//--------------------------------
+//- navigation
+//--------------------------------
+$header-bottom_bg: $dark_color;
+$navbar_bg: #1a1a1a;
+$dropdown_color: #fff;
+$dropdown_bg: #1a1a1a;
+$dropdown_bg_hover: #444;
+
+//--------------------------------
+//- index
+//--------------------------------
+$index_border_bottom: $normal_color;
+$byline_color: $middle_color;
+
+//--------------------------------
+//- Entry
+//--------------------------------
+$entry_title_color: $body_color;
+$hr_color: $normal_color;
+
+$table_border: $normal_color;
+$table_th_bg: $light_color;
+
+$caption_color: $middle_color;
+
+$img_shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+$tags_border: #ededed;
+
+//--------------------------------
+//- Comments
+//--------------------------------
+$comments_head_bg: $light_color;
+$comment_border: $light_color;
+$comment_metadata_color: $middle_color;
+$comments_head_border: $normal_color;
+
+//reply
+
+
+//--------------------------------
+//- Sidebar Footer
+//--------------------------------
+$sidebar_footer_bg: $light_color;
+
+//--------------------------------
+//- Sidebar
+//--------------------------------
+$sidebar_bg: $normal_color;
+
+//--------------------------------
+//- Misc
+//--------------------------------
+$error_border: $normal_color;
+$pagination_bg: $normal_color;
+$pagination_active: $link_color;

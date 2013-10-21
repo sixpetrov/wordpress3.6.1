@@ -1,0 +1,54 @@
+//=================================================================================
+//= 								Imports
+//=================================================================================
+@import "compass/reset";
+@import "compass/css3";
+
+@import "colors";
+@import "mixins";
+
+//==================================================================================
+//= 								Global Variables
+//==================================================================================
+$input_padding: 0.5em 1em;
+$site_width: 980;
+
+//LAYOUT VARS
+$NAVBAR_ON_RIGHT: false;
+$WIDE_SLIDER: false;
+$FOOTER_SEARCH: true;
+
+
+//=================================================================================
+//= 								Sprites
+//=================================================================================
+.sprites { background-image: url(../images/sprites.png); background-color: transparent; background-repeat: no-repeat; }
+
+.logo { background-position: -0px -0px; width: 149px; height: 41px; }
+.icon-twitter-header { background-position: -0px -41px; width: 32px; height: 32px; }
+.icon-facebook-header { background-position: -32px -41px; width: 32px; height: 32px; }
+.search-dark { background-position: -64px -41px; width: 20px; height: 20px; }
+.tag-blue { background-position: -84px -41px; width: 16px; height: 16px; }
+.search-white { background-position: -100px -41px; width: 14px; height: 15px; }
+.button-trans { background-position: -114px -41px; width: 15px; height: 15px; }
+
+
+//================================================================================
+//= 								Partials
+//================================================================================
+@import "fonts";
+@import "layout";
+@import "html";   
+@import "header";
+@import "widgets";
+@import "index";
+@import "entry";
+@import "comments";
+@import "footer";
+@import "misc";
+@import "templates";
+@import "home";
+@import "carousel";
+@import "composer";
+
+@import "tmp";

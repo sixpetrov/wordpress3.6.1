@@ -1,0 +1,78 @@
+$slider_h: 450;
+
+.container-slider { 
+    visibility: hidden; 
+}
+
+//--------------------------------
+//- GENERAL
+//--------------------------------
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    height: pxx($slider_h);
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+
+//--------------------------------
+//- Navigation
+//--------------------------------
+.rslides_controls {
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    z-index: 2;
+    background: rgba(216, 216, 216, 0.85);
+
+    a {
+        text-indent: -9999em;
+        display: block;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.rslides_controls_prev {
+    left: 0;
+
+    a {
+        background: url("../images/camera/camera_skins.png") no-repeat 0 0;
+    }
+}
+
+.rslides_controls_next {
+    right: 0;
+
+    a {
+        background: url("../images/camera/camera_skins.png") no-repeat -40px 0;
+    }
+}

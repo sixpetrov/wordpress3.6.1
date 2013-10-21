@@ -1,0 +1,163 @@
+//container
+#comments-container {
+	margin: 20px 0;
+}
+
+//header with comments count
+#comments-count-head {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+	text-transform: uppercase;
+	color: inherit;
+    text-align: center;
+    background: $comments_head_bg;
+
+    @if $DARK_COLORS {
+        border: 1px solid $comments_head_border;
+    }   
+}
+
+//nested comments
+.commentlist .children {
+	margin-left: 4em;
+}
+
+//the whole comment
+.comment-body {
+	padding-bottom: 2em;
+	border-bottom: 1px solid $comment_border;
+	margin-top: 2em;
+}
+
+//avatar
+.comment-body .avatar {
+    float: left;
+    padding: 2px;
+    width: 57px;
+    height: 57px;
+    margin-right: 2em;	
+    margin-bottom: 1em;
+}
+
+//text, metadata
+.comment-content {
+	
+	.moderation {
+		color: red;
+		margin-bottom: 1em;
+	}
+}
+
+.comment-header {
+	margin-bottom: 1em;
+}
+
+.comment-author {
+
+}
+
+.comment-metadata {
+	margin-top: 4px;
+	font-size: 11px;
+
+	a, span {
+		color: $comment_metadata_color;
+	}
+
+	a:hover {
+		text-decoration: underline;
+		color: $link_color;
+	}
+}
+
+.comment-text {
+	@include lh;
+}
+
+//* PINGS *//
+#container-pings {
+    padding: 20px 0;
+    width: 100%;
+
+    p {
+        @include lh;
+    }
+}
+
+#pings-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ping-title {
+    font-size: 11px;
+}
+
+li.pings {
+    padding: 10px;
+    border-bottom: 1px dashed $light_color;
+}
+
+//*-------------------------------
+//* Respond
+//*-----------------------------*/
+#respond {
+    padding: 2em 0 1em;
+
+    #respond-head {
+    	font-size: 20px;
+    }
+
+    .cancel-comment-reply {
+    	margin: 1em 0;
+
+    	a {
+    		color: red;  		
+    	}
+    }
+
+    #commentform {
+    	margin-top: 2em;
+    }
+
+    input[type='text'],
+    textarea {
+        border-radius: 3px;
+        background: $reply_bg;
+    }
+
+    input[type='text'] {
+    	width: 35%;
+    	margin-bottom: 1em;
+    	margin-right: 1em;
+    }       
+
+    textarea {
+        width: 60%;
+    }
+
+    .comment-admin-logged {
+    	margin-bottom: 1em;
+    }
+}
+
+#comment-submit 
+{
+    @if $DARK_COLORS {
+        background: $light_color;
+        border: 1px solid $normal_color;
+        padding: 6px 10px;
+        border-radius: 3px;
+    }
+    @else {
+        @include btn_gray;
+    }
+
+    margin: 1em 0 0 0;
+    color: inherit;
+
+    &:active {
+        @include btn_active;
+    }
+}

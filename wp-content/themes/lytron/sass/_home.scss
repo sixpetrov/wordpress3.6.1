@@ -1,0 +1,120 @@
+//================================================================================
+//= 								Slider
+//================================================================================
+
+#WrapperSlider {
+	height: 600px; //CHANGE  - the same height as in slider-settings.js
+}
+
+.container-slider {
+	position: relative;
+	margin: auto; 
+	
+	@if $WIDE_SLIDER {
+	    width: 100%;
+	    max-width: 1920px;  
+	}
+	@else {
+		max-width: pxx($site_width);
+	}
+}
+
+
+@import "camera";
+// @import "rslides";
+
+//--------------------------------
+//- rslides pagination 
+//--------------------------------
+.camera_pag_wrapper {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	z-index: 100;
+}
+
+.camera_pag 
+{
+	text-align: center;
+
+	ul {
+		display: inline-block;
+	}
+}
+
+.camera_wrap {
+	margin-bottom: 0px !important;
+}
+
+.camera_wrap .camera_pag .camera_pag_ul {
+	
+	li {
+		background: #666; //dots bg
+	}
+
+	.cameracurrent {
+		background: #fff;
+
+		> span {
+			background: transparent !important;
+		}
+	}
+}
+
+//--------------------------------
+//- rslides Navigation
+//--------------------------------
+// .camera_prev, .camera_next, .camera_commands {
+// 	margin-top: -160px;
+// }
+
+
+//--------------------------------
+//- Slider message (if any)
+//--------------------------------
+// #slider-msg {
+// 	$sliderMsgHeight: 50;
+//  	$sliderMsgFontSize: 14;
+
+// 	@if $WIDE_SLIDER {
+// 		@include wide;	
+// 	}
+// 	@else {
+// 		width: pxx($site_width);
+// 	}	
+
+// 	height: pxx($sliderMsgHeight);
+// 	background: rgba(0, 0, 0, 0.8);
+// 	position: absolute;
+// 	left:0;
+// 	bottom: 0;
+// 	text-align: center;
+
+// 	p {
+// 		@include mtop($sliderMsgHeight, $sliderMsgFontSize);
+// 		font-size: pxx($sliderMsgFontSize);
+// 		color: #fff;
+// 	}
+// }
+
+
+//================================================================================
+//= 								Home Content
+//================================================================================
+#WrapperHome {
+
+}
+
+#container-entries-home {
+
+	//two columns, left big
+	.vc_span8 .wpb_content_element {
+		margin-right: 20px;
+	}
+
+	//two cols, left small
+	// .vc_span9 .wpb_content_element {
+	// 	margin-left: 20px;
+	// }
+}

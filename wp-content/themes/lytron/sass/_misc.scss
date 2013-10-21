@@ -1,0 +1,58 @@
+//*-------------------------------
+//* 404
+//*-----------------------------*/
+#errorbox {
+	float: left;
+	width: 100%;
+	line-height: 1.5;
+}
+
+#errorbox h1 {
+	border-bottom: 3px double $error_border;
+	font-size: 24px;
+	padding-bottom: 3px;
+	margin-bottom: 10px;
+}
+
+#error-search {
+	float: left;
+	margin-top: 10px;
+}
+
+#error-search form {
+	width: 300px;
+}
+
+//*-------------------------------
+//* Pagination
+//*-----------------------------*/
+$pagination_padding: 6px 9px 5px 9px;
+
+.pagination {
+    padding: 20px 0;
+    position: relative;
+    font-size: 11px;
+    line-height: 13px;
+    float: left;
+}
+.pagination span, .pagination a {
+    display: block;
+    float: left;
+    margin: 2px 2px 2px 0;
+    padding: $pagination_padding;
+    text-decoration: none;
+    width: auto;
+    color: #fff;
+    background: $pagination_bg;
+
+    &:hover {
+    	background: $pagination_active;
+    }
+}
+.pagination a:visited {
+    color: #fff;
+}
+.pagination .current {
+    padding: $pagination_padding;
+    background: $pagination_active;
+}

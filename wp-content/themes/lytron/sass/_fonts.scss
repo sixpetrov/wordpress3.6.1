@@ -1,0 +1,46 @@
+//==================================================================================================
+//= 										Mixins
+//==================================================================================================
+@mixin lato {
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin osans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+//==================================================================================================
+//= 										Implementation
+//==================================================================================================
+body {
+	font-family: Arial, sans-serif;
+}
+
+// #headerIcons {
+
+// }
+
+#navbar-menu > li > a {
+
+}
+
+.entry-title {
+	font-weight: bold;
+	font-size: 22px;
+	color: inherit;
+	// text-transform: uppercase;
+}
+
+.widget-title {
+	font-size: 18px; 
+    font-weight: bold;   
+    // text-transform: uppercase; 
+}
+
+// .widget-title-sidebar {
+
+// }
+
+// .widget-title-footer {
+    
+// }
