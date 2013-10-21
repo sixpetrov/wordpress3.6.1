@@ -1,2 +1,5 @@
 .idea/
 wp-content/uploads/*
+wp-content/themes/lytron/
+wp-content/plugins/js_composer/
+wp-content/plugins/iphorm-form-builder/
