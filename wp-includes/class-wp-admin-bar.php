@@ -46,7 +46,11 @@ class WP_Admin_Bar {
 		add_action( 'admin_head', 'wp_admin_bar_header' );
 
 		if ( current_theme_supports( 'admin-bar' ) ) {
-			$admin_bar_args = get_theme_support( 'admin-bar' ); // add_theme_support( 'admin-bar', array( 'callback' => '__return_false') );
+			/**
+			 * To remove the default padding styles from WordPress for the Toolbar, use the following code:
+			 * add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+			 */
+			$admin_bar_args = get_theme_support( 'admin-bar' );
 			$header_callback = $admin_bar_args[0]['callback'];
 		}
 
@@ -58,6 +62,11 @@ class WP_Admin_Bar {
 		wp_enqueue_script( 'admin-bar' );
 		wp_enqueue_style( 'admin-bar' );
 
+		/**
+		 * Fires after WP_Admin_Bar is initialized.
+		 *
+		 * @since 3.1.0
+		 */
 		do_action( 'admin_bar_init' );
 	}
 
@@ -353,43 +362,6 @@ class WP_Admin_Bar {
 				<?php foreach ( $root->children as $group ) {
 					$this->_render_group( $group );
 				} ?>
-                <div class="separator" style="border-right: 1px solid #555; float: left; margin: 0 10px;">
-                    <span style="border-right: 1px solid #333; float: left; height: 28px;"></span>
-                </div>
-
-                <a class="wpsp-adminbar" style="float:left;" href="<?php bloginfo('url') ?>/wp-admin/admin.php?import=wordpress">Import</a>
-                <a class="wpsp-adminbar" style="float:left;" href="<?php bloginfo('url') ?>/wp-admin/export.php">Export</a>
-
-                <div class="separator" style="border-right: 1px solid #555; float: left; margin: 0 10px;">
-                    <span style="border-right: 1px solid #333; float: left; height: 28px;"></span>
-                </div>
-
-                <a class="wpsp-adminbar" style="float:left;" href="<?php bloginfo('url') ?>/wp-admin/edit.php?post_type=aki">AKI Fields Groups</a>
-                <a class="wpsp-adminbar" style="float:left;" href="<?php bloginfo('url') ?>/wp-admin/edit.php?post_type=aki&page=aki-settings">AKI export</a>
-
-                <div class="separator" style="border-right: 1px solid #555; float: left; margin: 0 10px;">
-                    <span style="border-right: 1px solid #333; float: left; height: 28px;"></span>
-                </div>
-
-                <a target="_blank" target="_blank" class="wpsp-adminbar" style="float:left;" href="<?php bloginfo('url') ?>">Web Site</a>
-                
-                <style type="text/css">
-                    /* Admin-bar ACF links */
-                    .wpsp-adminbar {
-                        float: left;
-                    }
-
-                    .wpsp-adminbar:hover {
-                        background: #000 !important;
-                        color: #fff !important;
-                    }
-
-                    .wpsp-adminbar:active {
-                        position: relative !important;
-                        top: 1px !important;
-                    }
-
-                </style>
 			</div>
 			<?php if ( is_user_logged_in() ) : ?>
 			<a class="screen-reader-shortcut" href="<?php echo esc_url( wp_logout_url() ); ?>"><?php _e('Log Out'); ?></a>
@@ -524,6 +496,11 @@ class WP_Admin_Bar {
 
 		add_action( 'admin_bar_menu', 'wp_admin_bar_add_secondary_groups', 200 );
 
+		/**
+		 * Fires after menus are added to the menu bar.
+		 *
+		 * @since 3.1.0
+		 */
 		do_action( 'add_admin_bar_menus' );
 	}
 }
