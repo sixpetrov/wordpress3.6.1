@@ -16,7 +16,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'lytroncms_original_wp');
+define('DB_NAME', 'lytroncms_original_wp_github');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -79,6 +79,11 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+/**
+ * This is needed for Unix servers
+ */
+define('FS_METHOD','direct');
 
 /* That's all, stop editing! Happy blogging. */
 
